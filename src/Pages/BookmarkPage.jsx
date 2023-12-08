@@ -18,8 +18,8 @@ const BookmarkPage = () => {
   }
   return (
     <>
-      {allbookmarks.length > 0 ? (
-        allbookmarks.map((card, index) => (
+      {allbookmarks?.length > 0 ? (
+        allbookmarks?.map((card, index) => (
           <BlogCard key={index} isBookmark={true} card={card}></BlogCard>
         ))
       ) : (

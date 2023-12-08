@@ -22,7 +22,7 @@ export default function Profile({ profileImg, name }) {
         <img
           src={profileImg}
           alt=""
-          className="rounded-full dark:bg-darkBgPrimary h-8 w-8 mr-2"
+          className="rounded-full dark:bg-darkBgPrimary bg-gray-200 h-8 w-8 mr-2"
         />
       </div>
     </>

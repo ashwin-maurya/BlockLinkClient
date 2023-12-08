@@ -14,7 +14,7 @@ export default function Comments({ blog }) {
   const ModalStatus = () => {
     setAuthModal((showAuthModal) => !showAuthModal);
   };
-  // https://bloglinkbackend-it3i.onrender.com
+  // http://localhost:5001
 
   const [comment, setcomment] = useState("");
   useEffect(() => {

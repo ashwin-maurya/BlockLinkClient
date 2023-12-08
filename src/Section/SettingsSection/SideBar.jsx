@@ -59,19 +59,6 @@ export default function SideBar() {
               <p className="max-lg:hidden"> Reset Password</p>
             </Link>
           </li>
-          <li className="w-[80%] flex hover:dark:bg-darkBgPrimary hover:bg-bgBlue  rounded-lg my-1">
-            <Link
-              to="AccountUpdate"
-              className="w-full  flex items-center max-lg:justify-center  text-left font-montserrat leading-normal py-2 text-lg font-semibold dark:hover:text-secondary text-gray-400 hover:text-primaryMain text-slate-gray dark:text-darkTextMain"
-            >
-              <div className="w-[20%] max-lg:w-[100%] flex justify-center">
-                <div className="w-7 h-7 bg-primaryMain dark:bg-secondary rounded-full m-2 flex justify-center items-center ">
-                  <i className="fa fa-trash-o text-bgBlue text-base"></i>
-                </div>
-              </div>
-              <p className="max-lg:hidden"> Delete Account</p>
-            </Link>
-          </li>
         </ul>
       </div>
     </>

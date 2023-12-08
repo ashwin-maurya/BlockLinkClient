@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function SocialUpdate() {
   const context = useContext(AuthContext);
   const { UserDetails, getCurrentUser } = context;
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
 
   const [socialLinks, setSocialLinks] = useState({
     github: "",

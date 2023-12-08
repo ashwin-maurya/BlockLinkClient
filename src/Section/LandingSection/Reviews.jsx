@@ -21,7 +21,7 @@ export default function Reviews() {
     const fetchReviews = async () => {
       try {
         const response = await fetch(
-          "https://bloglinkbackend-it3i.onrender.com/api/feedback/getReviews",
+          "http://localhost:5001/api/feedback/getReviews",
           {
             method: "GET",
             headers: {

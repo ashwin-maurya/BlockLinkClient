@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LoadingBar from "react-top-loading-bar";
 
 export default function Login({ setSign, ModalStatus, goolesignin }) {
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
 
   const [Logincreds, setLogincreds] = useState({ email: "", password: "" });
   const context = useContext(AuthContext);

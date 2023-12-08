@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { target } from "../../Assets/icons";
+import { BlogLink } from "../../Assets/icons";
 import ShareModal from "./ShareModal";
 import Bookmark from "../common/IconComponents/Bookmark";
 import Like from "../common/IconComponents/Like";
@@ -33,7 +33,7 @@ const TopicBar = ({
       >
         <div className="pl-10  max-sm:pl-3 items-center flex  dark:hover:text-secondary  py-3 max-sm:py-3 tracking-wider ">
           <div className=" pr-3 max-sm:pr-2 border-gray-400 border-r-2">
-            <img src={target} alt="" />
+            <img src={BlogLink} className="max-h-8 rotate-90" alt="" />
           </div>
 
           <p className="pl-3  max-sm:text-[15px] font-bold text-black capitalize dark:text-white text-[23px]">

@@ -37,7 +37,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (UserDetails) {
-      filterblogs(UserProfile?.userDetailId);
+      filterblogs(UserProfile?.ID);
     }
   }, [username, UserDetails]);
 
@@ -50,7 +50,9 @@ export default function ProfilePage() {
   return (
     <>
       <ProfileMain UserProfile={UserProfile} UserMatch={UserMatch} />
-      <UserBlogs filterData={filterData} UserMatch={UserMatch} />
+      {filterData.length > 0 && (
+        <UserBlogs filterData={filterData} UserMatch={UserMatch} />
+      )}
     </>
   );
 }

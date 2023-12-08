@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { reviewEmojis } from "../constants";
 export default function FeedbackModal({ FeedbackMenu }) {
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
   const modalRef = useRef(null);
   const [feedbackData, setFeedbackData] = useState({
     feedbackType: "",
@@ -66,13 +66,13 @@ export default function FeedbackModal({ FeedbackMenu }) {
     <>
       <div
         id="myModal"
-        className="fixed z-49 inset-0 flex items-center transition-all ease-in-out duration-300 justify-center backdrop-blur-sm bg-Opacityblack"
+        className="fixed z-[99] inset-0 flex items-center transition-all ease-in-out duration-300 justify-center backdrop-blur-sm bg-Opacityblack"
         ref={modalRef}
         onClick={handleOutsideClick}
       >
         <div className="w-1/2 max-lg:w-[90%] flex rounded-lg h-auto bg-white dark:bg-darkBgMain shadow-xl">
           <form className="p-4 w-full">
-            <h2 className="text-2xl font-bold mb-4 text-center">
+            <h2 className="text-2xl font-bold mb-4 text-center dark:text-white">
               Feedback Form
             </h2>
 

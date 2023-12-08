@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function PasswordUpdate() {
   const context = useContext(AuthContext);
   const { UserDetails, getCurrentUser, AuthStatus } = context;
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
 
   const [oldPassword, setOldPassword] = useState("");
   const [password, setPassword] = useState("");

@@ -2,7 +2,7 @@ import { useState } from "react";
 import blogContext from "./blogContext";
 
 const BlogState = (props) => {
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
   const bloginitial = [];
   const bloginitial1 = [];
 
@@ -30,21 +30,19 @@ const BlogState = (props) => {
   //Filter blogs by Username ----------------------------------------------------------------------------------------
   const filterblogs = async (userID) => {
     console.log(userID);
-    const response = await fetch(
-      `${host}/api/blogs/filterblog/userID=${userID}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(`${host}/api/blogs/filterblog/${userID}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     const json = await response.json();
     console.log("json asadbewb wef ewfef ewferfj");
     console.log(json);
     setfilterData(json);
   };
+
   const getsingleblogContent = async (id) => {
     console.log(id);
 

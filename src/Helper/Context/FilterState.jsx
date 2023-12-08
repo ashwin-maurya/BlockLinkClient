@@ -2,7 +2,7 @@ import { useState } from "react";
 import FilterContext from "./FilterContext";
 
 const FilterState = (props) => {
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
 
   const [filterBlogs, setfilterBlogs] = useState([]);
   const getallblogs = async () => {
@@ -162,4 +162,4 @@ const FilterState = (props) => {
 
 export default FilterState;
 
-// https://bloglinkbackend-it3i.onrender.com
+// http://localhost:5001

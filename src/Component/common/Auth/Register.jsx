@@ -22,7 +22,7 @@ export default function Register({
 
   const [loadingBarProgress, setLoadingBarProgress] = useState(0);
 
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
 
   const RegisterOnchange = (e) => {
     setRegistercreds({
@@ -107,6 +107,7 @@ export default function Register({
         getCurrentUser(JSON.parse(localStorage.getItem("UserData")).UserID);
         RelevantModalStatus();
         ModalStatus();
+        window.location.reload();
       } else {
         toast.error("Server error! Please try again!");
       }

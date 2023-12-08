@@ -115,9 +115,9 @@ export default function LandingCards({ card }) {
             <img
               className="rounded-full  dark:bg-darkBgMain bg-white max-w-none max-sm:w-8 max-sm:h-8 w-10  h-10 object-cover object-top"
               src={
-                card.author.profileImg == ""
+                card?.author?.profileImg == ""
                   ? profileDefault
-                  : card.author.profileImg
+                  : card?.author?.profileImg
               }
             />
             <div className="flex flex-col justify-center ml-2">
@@ -130,7 +130,7 @@ export default function LandingCards({ card }) {
                   );
                 }}
               >
-                {card?.author.username}
+                {card?.author?.username}
               </div>
               <div className="text-slate-600 font-semibold text-xs max-lg:text-[15px] max-sm:text-[10px] max-md:text-[12px]  dark:text-darkTextPrimary">
                 {date}
@@ -150,7 +150,7 @@ export default function LandingCards({ card }) {
         </div>
         <div className="flex gap-10">
           <h2
-            className="text-gray-800 text-xl max-lg:text-md max-sm:text-sm leading-7 font-bold font-serif  dark:text-darkTextMain hover:text-primaryMain tracking-wider dark:hover:text-secondary line-clamp-2 cursor-pointer capitalize"
+            className="text-gray-800 text-xl max-lg:text-base max-sm:text-sm leading-7 font-bold font-serif  dark:text-darkTextMain hover:text-primaryMain tracking-wider dark:hover:text-secondary line-clamp-2 cursor-pointer capitalize"
             onClick={() => {
               navigate(`/blogs/${card?._id}`);
             }}

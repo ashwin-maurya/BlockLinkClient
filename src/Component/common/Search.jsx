@@ -7,7 +7,7 @@ export default function Search() {
   const [searchtext, setSearchtext] = useState("");
   const [searchResult, setSearchResult] = useState({});
   const [searchResultExist, setSearchResultExist] = useState(false);
-  const host = "https://bloglinkbackend-it3i.onrender.com";
+  const host = "http://localhost:5001";
   const navigate = useNavigate();
 
   useEffect(() => {

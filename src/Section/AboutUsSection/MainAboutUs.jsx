@@ -8,12 +8,12 @@ export default function MainAboutUs() {
       <section className="pb-24">
         <div className="relative mb-20 h-96">
           <img
-            className="object-cover w-full h-full"
-            src="https://i.postimg.cc/Y23w2gc1/pexels-ricardo-esquivel-1586298.jpg"
+            className="object-cover object-right w-full h-full"
+            src="https://img.freepik.com/premium-photo/network-connections-world-global-link-generate-ai_98402-22435.jpg?w=900"
             alt=""
           />
           <img
-            className="absolute bottom-0 left-0 object-cover w-40 h-40 ml-4 -mb-16 rounded-full lg:ml-12 lg:-mb-24 lg:w-60 lg:h-60 bg-primaryMain rotate-90"
+            className="absolute bottom-0 left-0 object-cover w-40 h-40 ml-4 -mb-16 rounded-full lg:ml-12 lg:-mb-24 lg:w-60 lg:h-60 dark:bg-black bg-primaryMain  rotate-90"
             src={BlogLink}
             alt=""
           />

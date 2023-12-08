@@ -118,7 +118,7 @@ export default function ProfileMain({ UserProfile, UserMatch }) {
         <div className=" w-full h-full  ">
           <div className="relative group/buttons h-[300px]">
             <img
-              className=" w-full h-full bg-center bg-cover "
+              className=" w-full h-full bg-center bg-cover object-cover object-top"
               height={10}
               src={
                 UserProfile?.bannerImg != ""
@@ -154,7 +154,7 @@ export default function ProfileMain({ UserProfile, UserMatch }) {
                       ? UserProfile?.profileImg
                       : profileImg
                   }
-                  className="shadow-xl rounded-full  w-40 h-40 -mt-24 bg-white dark:bg-darkBgMain   border-4 border-white dark:border-darkBgMain"
+                  className="shadow-xl rounded-full  w-40 h-40 -mt-24 bg-white dark:bg-darkBgMain   border-4 border-white object-cover object-top dark:border-darkBgMain"
                 />
 
                 {UserMatch && (
@@ -253,13 +253,13 @@ export default function ProfileMain({ UserProfile, UserMatch }) {
                 <div className="flex justify-evenly gap-5">
                   <div className="bg-white dark:bg-darkBgPrimary shadow-sm px-4 py-2 rounded-lg flex w-full items-center justify-center">
                     <div className="flex dark:text-secondary text-primaryMain  flex-col justify-center items-center">
-                      <div className="text-2xl">203</div>
+                      <div className="text-2xl">-</div>
                       <div className="font-bold">Blogs</div>
                     </div>
                   </div>
                   <div className="bg-white dark:bg-darkBgPrimary shadow-sm px-4 py-2 rounded-lg flex w-full items-center justify-center">
                     <div className="flex dark:text-secondary text-primaryMain  flex-col justify-center items-center">
-                      <div className="text-2xl">900</div>
+                      <div className="text-2xl">-</div>
                       <div className="font-bold">Impressions</div>
                     </div>
                   </div>
