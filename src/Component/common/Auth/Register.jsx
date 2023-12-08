@@ -107,7 +107,6 @@ export default function Register({
         getCurrentUser(JSON.parse(localStorage.getItem("UserData")).UserID);
         RelevantModalStatus();
         ModalStatus();
-        window.location.reload();
       } else {
         toast.error("Server error! Please try again!");
       }

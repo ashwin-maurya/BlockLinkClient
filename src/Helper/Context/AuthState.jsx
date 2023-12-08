@@ -252,6 +252,7 @@ const AuthState = (props) => {
       };
       setUserDetails(updatedUserDetails);
       setUserDetailExist();
+      window.location.reload();
     } else {
       toast.error("Failed!!");
     }
