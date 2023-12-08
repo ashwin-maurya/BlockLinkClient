@@ -3,7 +3,7 @@ import AuthContext from "./AuthContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const AuthState = (props) => {
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
 
   const [UserDetails, setUserDetails] = useState();
   const [AuthStatus, setAuthStatus] = useState(false);
@@ -111,7 +111,6 @@ const AuthState = (props) => {
 
   const getUser = async (username) => {
     //API call
-    console.log(username);
     const response = await fetch(
       `${host}/api/auth/getuser?username=${username}`,
       {
@@ -150,7 +149,6 @@ const AuthState = (props) => {
           relevant: UserDetail.relevant,
           socialLinks: UserDetail.socialLinks,
         };
-        console.log(updatedUserDetails);
 
         setUserProfile(updatedUserDetails);
       } else {
@@ -221,7 +219,8 @@ const AuthState = (props) => {
       }),
     });
     const ProfileUpdated = await response.json();
-    console.log(userID);
+    console.log("ProfileUpdated");
+    console.log(ProfileUpdated);
     const response1 = await fetch(`${host}/api/auth/addUserDetailIdToUsers`, {
       method: "POST",
       headers: {
@@ -234,6 +233,8 @@ const AuthState = (props) => {
       }),
     });
     const json1 = await response1.json();
+    console.log("json1");
+    console.log(json1);
     localStorage.setItem("UserData", JSON.stringify(json1));
 
     if (ProfileUpdated) {
@@ -298,9 +299,7 @@ const AuthState = (props) => {
     // todo api call
     //API call
 
-    console.log(data);
     const obj = JSON.parse(localStorage.getItem("UserData"));
-    console.log(obj.authtoken);
     const { key, imgUrl, userID } = data;
     const response = await fetch(`${host}/api/auth/addimg`, {
       method: "POST",
@@ -316,13 +315,10 @@ const AuthState = (props) => {
     });
     const comments2 = await response.json();
 
-    console.log(comments2);
-
     // console.log(SingleBlogComment);
 
     getUser(userID);
     getCurrentUser(JSON.parse(localStorage.getItem("UserData")).UserID);
-    console.log("form addimg");
   };
 
   return (

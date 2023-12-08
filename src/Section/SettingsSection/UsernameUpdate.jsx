@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function UsernameUpdate() {
   const context = useContext(AuthContext);
   const { UserDetails, getCurrentUser } = context;
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
 
   const [username, setUsername] = useState(UserDetails?.username || "");
   const [usernameExists, setUsernameExists] = useState(false);

@@ -12,7 +12,7 @@ const CommentLikeState = (props) => {
   const context = useContext(blogContext);
   // const {}
   const [reply, setreply] = useState({});
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
   const [SingleBlogComment, setSingleBlogComment] = useState([]);
   const addreply = async (data) => {
     const { id } = data;

@@ -12,6 +12,7 @@ import ShareModal from "../SingleBlogComponents/ShareModal";
 import FilterContext from "../../Helper/Context/FilterContext";
 import Bookmark from "./IconComponents/Bookmark";
 import Like from "./IconComponents/Like";
+import { BannerImg } from "../../Assets/images";
 export default function BlogCard({ card, isBookmark, isLiked }) {
   const context = useContext(blogContext);
   const context6 = useContext(FilterContext);
@@ -200,7 +201,7 @@ export default function BlogCard({ card, isBookmark, isLiked }) {
                 }}
               >
                 <img
-                  src={card?.Blog_url}
+                  src={card?.Blog_url != "" ? card?.Blog_url : BannerImg}
                   className="content-evenly max-h-[90px] object-cover transition-all ease-in-out duration-200 group-hover:scale-[1.2] "
                   width={280}
                   alt="codeimg"

@@ -11,7 +11,7 @@ const RelevantUpdate = (props) => {
   const { UserDetails, getCurrentUser } = context;
   const context2 = useContext(FilterContext);
   const { getallcategory } = context2;
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
   useEffect(() => {
     setSelectedOptions(UserDetails?.relevant || []);
   }, [UserDetails]);

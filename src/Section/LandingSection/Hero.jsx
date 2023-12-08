@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HomeHeroSkeleton from "../../Component/SkeletonLoaders/HomeHeroSkeleton";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { BannerImg } from "../../Assets/images";
 import "react-toastify/dist/ReactToastify.css";
 const Hero = () => {
   const [randomBlog, setRandomBlog] = useState(null);
@@ -15,7 +16,7 @@ const Hero = () => {
     const fetchRandomBlog = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5001/api/blogs/fetchrandomblog"
+          "https://bloglinkbackend-it3i.onrender.com/api/blogs/fetchrandomblog"
         );
         const data = await response?.json();
         setRandomBlog(data);
@@ -38,7 +39,9 @@ const Hero = () => {
           randomBlog && (
             <>
               <img
-                src={randomBlog?.Blog_url}
+                src={
+                  randomBlog?.Blog_url != "" ? randomBlog?.Blog_url : BannerImg
+                }
                 alt="hero-image"
                 className="max-h-[400px] min-h-[400px] w-full max-sm:max-h-[250px] max-sm:min-h-[250px] overflow-hidden object-cover object-top dark:bg-gray-700 "
               />

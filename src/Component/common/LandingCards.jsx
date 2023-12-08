@@ -1,6 +1,5 @@
 import { Tags } from "../../Component/common";
 import { useNavigate } from "react-router-dom";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import blogContext from "../../Helper/Context/blogContext";
@@ -8,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import HelperContext from "../../Helper/Context/HelperContext";
 import AuthContext from "../../Helper/Context/AuthContext";
 import { code1 } from "../../Assets/images";
-
+import { BannerImg } from "../../Assets/images";
 import {
   dark,
   darkprofileDefault,
@@ -160,7 +159,10 @@ export default function LandingCards({ card }) {
         </div>
 
         <div className="py-3 max-sm:py-2">
-          <img className="w-full rounded-lg" src={card.Blog_url} />
+          <img
+            className="w-full rounded-lg"
+            src={card?.Blog_url != "" ? card?.Blog_url : BannerImg}
+          />
         </div>
         <div className="flex justify-between">
           <div className="flex gap-10 max-lg:gap-7 max-md:gap-5 max-sm:gap-0">

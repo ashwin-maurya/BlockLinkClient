@@ -8,7 +8,7 @@ import { GoogleSignInAPI } from "../../../api/AuthAPI";
 import { toast } from "react-toastify";
 import RelevantModal from "./RelevantModal";
 export default function Authentication(props) {
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
   const context = useContext(AuthContext);
   const {
     setAuthStatus,

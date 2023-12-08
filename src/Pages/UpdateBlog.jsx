@@ -8,8 +8,11 @@ import FeaturedImage from "../Component/common/WriteComponents/FeaturedImage";
 import Content from "../Component/common/WriteComponents/Content";
 import Category from "../Component/common/WriteComponents/Category";
 import Tag from "../Component/common/WriteComponents/Tag";
+import { useNavigate } from "react-router-dom";
 
 const UpdateBlog = ({ UserDetails, blog2 }) => {
+  const navigate = useNavigate();
+
   const [blogs, setblog] = useState(blog2[0]);
   console.log(blog2);
 
@@ -78,8 +81,10 @@ const UpdateBlog = ({ UserDetails, blog2 }) => {
       console.log(blog2[0]);
       console.log({ blogs });
       updateblog(blogs, blog2[0]._id);
+      navigate(`/blogs/${blog2[0]._id}`);
+
       console.log("Saved to Database");
-     //("Blog Updated Successfully");
+      //("Blog Updated Successfully");
     } catch (error) {
       toast.error("Error occured while adding your blog");
     }

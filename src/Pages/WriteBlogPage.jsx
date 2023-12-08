@@ -9,10 +9,11 @@ import Tag from "../Component/common/WriteComponents/Tag";
 import Category from "../Component/common/WriteComponents/Category";
 import FeaturedImage from "../Component/common/WriteComponents/FeaturedImage";
 import Content from "../Component/common/WriteComponents/Content";
-import { useNavigation } from "react-router";
 import ShowPreview from "../Component/common/WriteComponents/ShowPreview";
 import SaveasDraft from "../Component/common/WriteComponents/SaveasDraft";
+import { useNavigate } from "react-router-dom";
 const WriteBlog = ({ UserDetails }) => {
+  const navigate = useNavigate();
   const [blogs, setblog] = useState({
     userID: JSON.parse(localStorage.getItem("UserData")).userDetailId,
   });
@@ -29,7 +30,6 @@ const WriteBlog = ({ UserDetails }) => {
       ...input,
       Category: category,
     });
-    console.log(blogs);
   }, [featuredImage, category]);
 
   useEffect(() => {
@@ -59,7 +59,6 @@ const WriteBlog = ({ UserDetails }) => {
     settags(strarr);
 
     setblog({ ...blogs, tags: strarr });
-    console.log(blogs);
   };
   const getInput = (event) => {
     let { name, value } = event.target;
@@ -67,14 +66,13 @@ const WriteBlog = ({ UserDetails }) => {
       [name]: value,
     };
     setblog({ ...blogs, ...input });
-    console.log(blogs);
   };
 
   const handleadd = async () => {
     try {
-      console.log(blogs);
-      // await addblogCard(blogs);
-      await addblogcontent(blogs);
+      let blogObj = await addblogcontent(blogs);
+      console.log(blogObj);
+      navigate(`/blogs/${blogObj._id}`);
       //("Your blog added Successfully!");
     } catch (error) {
       toast.error("Error occured while adding your blog");

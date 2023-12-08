@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { reviewEmojis } from "../constants";
 export default function FeedbackModal({ FeedbackMenu }) {
-  const host = "http://localhost:5001";
+  const host = "https://bloglinkbackend-it3i.onrender.com";
   const modalRef = useRef(null);
   const [feedbackData, setFeedbackData] = useState({
     feedbackType: "",
