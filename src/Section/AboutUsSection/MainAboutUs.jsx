@@ -32,12 +32,11 @@ export default function MainAboutUs() {
 
             <div className="p-6 mb-4 bg-gray-100 border-l-2 border-blue-500 dark:border-blue-400 dark:bg-gray-900">
               <p className="mb-4 text-xl leading-tight text-gray-800 dark:text-gray-300 md:text-2xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
+                "Life is like a box of chocolates, you never know what you're
+                going to get."
               </p>
               <span className="text-base text-gray-400 dark:text-gray-400 md:text-lg">
-                — John Doe, CEO &amp; Founder
+                — Forrest Gump
               </span>
             </div>
 

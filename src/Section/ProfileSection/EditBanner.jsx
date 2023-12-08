@@ -45,7 +45,7 @@ export default function EditBanner(props) {
                   ) : (
                     <p className="pointer-none text-gray-500 ">
                       <span className="text-sm">Please select an jpg/jpeg</span>{" "}
-                      file from your computer
+                      file from your computer. Dont use .png images for now.
                     </p>
                   )}
                 </div>

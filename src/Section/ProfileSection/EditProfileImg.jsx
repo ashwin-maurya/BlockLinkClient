@@ -34,7 +34,7 @@ export default function EditProfileImg(props) {
       >
         <div className="w-1/2 max-lg:w-[90%] h-auto   py-5 px-10 flex rounded-lg bg-white dark:bg-darkBgMain shadow-xl flex-col">
           <h1 className="text-xl pb-4   font-bold text-gray-500 tracking-wide">
-            Choose Profile Image
+            Choose Profile Image.
           </h1>
 
           <form
@@ -48,7 +48,7 @@ export default function EditProfileImg(props) {
                     <span className="text-sm text-gray-600 dark:text-gray-200">
                       {selectedImageName
                         ? selectedImageName
-                        : "Please select an jpg/jpeg file from your computer"}
+                        : "Please select an jpg/jpeg file from your computer. Dont use .png images for now."}
                     </span>{" "}
                   </p>
                 </div>
